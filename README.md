@@ -2,6 +2,7 @@
 
 ## Learning objectives
 
+- Create Grid
 - Move DOM elements on the page
 - React to key-presses to move through the grid and select
 - Collision detection
