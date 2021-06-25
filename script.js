@@ -67,17 +67,30 @@ document.addEventListener('keyup', function(e){
     }
 });
 
-// for restricting keys we want to listen for
+// for restricting keys we want to listen for 
 function handleKeyPress(key){
   console.log(key);
-}
+  // move elements around the page horizontally
+  if(key==='left'){
+    box.x -= player.speed;
+    // update square value
+    player.square --;
+  }
+  if(key==='right'){
+    box.x += player.speed;
+    // update square value
+    player.square ++;
+  }
 
+  // update style 
+  box.style.left = box.x + 'px';
+}
 
 // build visual part-grid and add player->box 
 function build(){
   box = document.createElement('div');
-  // console.log(box);
-  // set class
+// console.log(box);
+// set class
 box.classList.add('box');
 // console.log(box);
 // add variables which wont appear but contained in object
