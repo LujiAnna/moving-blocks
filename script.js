@@ -60,8 +60,17 @@ document.addEventListener('keyup', function(e){
     40:'down'
   }
   console.log(allowKey[e.keyCode]);
+
+    // handleKeyPress if keyCode exists in the object
+    if(allowKey[e.keyCode]){
+      handleKeyPress(allowKey[e.keyCode]);
+    }
 });
 
+// for restricting keys we want to listen for
+function handleKeyPress(key){
+  console.log(key);
+}
 
 
 // build visual part-grid and add player->box 
