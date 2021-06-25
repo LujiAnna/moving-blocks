@@ -22,6 +22,15 @@
     y:Math.floor(gameArea.height/100) //y=2
   };
 
+  // space
+  let player = {
+    // width
+    speed: 100,
+    // position
+    square: 1,
+    score: 0
+  }
+
 // trigger build of grid after page has loaded.
 // similar to document.ready object in jquery 
 // document.addEventListener('DOMContentLoaded', build);
@@ -36,8 +45,17 @@
 //   init();
 //   });
 // }
-
 build();
+
+// event which triggered that event
+document.addEventListener('keyup', function(e){
+  console.log(e);
+  console.log(e.keyCode);
+ 
+});
+
+
+
 // build visual part-grid and add player->box 
 function build(){
   box = document.createElement('div');
@@ -73,6 +91,10 @@ for(let y=0; y<gameBox.y; y++){
     counter++;
   }
 }
-
+// 17 squares : 8 by 2 grid sitting in square array. first one is empty 
+// ready to be selected and apply class and be manipulated
+// changed variables from px to vh/vw to dynamically create grid on window screen
+console.log(squares);
 }
+
 // })();
