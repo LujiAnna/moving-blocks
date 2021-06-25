@@ -58,5 +58,21 @@ box.style.left=box.x + 'px';
 // add to game area elements to add to the page
 gameAreaEle.appendChild(box);
 
+// loop through to show grids w/in square
+let counter = 1;
+// vertical grid builder
+for(let y=0; y<gameBox.y; y++){
+  // horizontal grid builder
+  for(let x=0; x<gameBox.x; x++){
+    squares[counter]=document.createElement('div');
+    squares[counter].innerHTML = counter;
+    // add class called square 
+    squares[counter].classList.add('square');
+    // child is square counter value object
+    gameAreaEle.appendChild(squares[counter]);
+    counter++;
+  }
+}
+
 }
 // })();
