@@ -30,4 +30,4 @@ Show the time since the start how long he survived.
 - Maybe over time spawn more enemy squares.
 - Go crazy
 
-* WIP: work in progress *
+* *WIP: work in progress *
