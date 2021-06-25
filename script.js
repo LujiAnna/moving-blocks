@@ -51,7 +51,15 @@ build();
 document.addEventListener('keyup', function(e){
   console.log(e);
   console.log(e.keyCode);
- 
+
+   // objects of keys we want to allow
+   const allowKey = {
+    37:'left', 
+    38:'up', 
+    39:'right',
+    40:'down'
+  }
+  console.log(allowKey[e.keyCode]);
 });
 
 
