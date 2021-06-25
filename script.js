@@ -68,22 +68,45 @@ document.addEventListener('keyup', function(e){
 });
 
 // for restricting keys we want to listen for 
+// and calculate value of square we're in
 function handleKeyPress(key){
   console.log(key);
   // move elements around the page horizontally
-  if(key==='left'){
+  // restrict movt to w/in game area
+  if(key==='left' && box.x > gameArea.left){
     box.x -= player.speed;
     // update square value
     player.square --;
   }
-  if(key==='right'){
+  if(key==='right' && box.x < gameArea.right - box.offsetWidth){
     box.x += player.speed;
     // update square value
     player.square ++;
   }
 
-  // update style 
+  // update style so box can move
   box.style.left = box.x + 'px';
+
+  // move elements around the page vertically
+  if(key==='down' && box.y < (gameArea.bottom - box.offsetHeight)){
+    // move down a line by moving past x values of 8
+    box.y += player.speed;
+    // update square value
+    player.square += gameBox.x;
+  }
+  if(key==='up' && box.y > gameArea.top){
+    // move up a line by moving past x values of 8
+    box.y -= player.speed;
+    // update square value
+    player.square -= gameBox.x;
+  }
+
+  // update style so the red square box can move
+  // square we are on corresponds with red square
+  box.style.top=box.y + 'px';
+
+  // check which square we're on
+  console.log(player.square);
 }
 
 // build visual part-grid and add player->box 
