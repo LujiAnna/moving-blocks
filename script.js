@@ -9,3 +9,22 @@ if( document.readyState !== 'loading' ) {
       myInitCode();
   });
 }
+
+function myInitCode() {
+
+  // set up objects to utilize content from players
+  let box = {};
+  
+  // select elements on page to reusable js objects
+  // these dont change, hence use const
+  const score = document.querySelector('.score');
+  const gameAreaEle = document.querySelector('.gameArea');
+  // select game area which will be used to make grid dynamically
+  const gameArea = gameAreaEle.getBoundingClientRect();
+  // console.log(score, gameAreaEle);
+  // console.log(gameArea);
+  
+  // create an array to add squares to
+  // helps to know which square the player is on
+  let squares = [];
+}  
