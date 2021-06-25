@@ -27,4 +27,12 @@ function myInitCode() {
   // create an array to add squares to
   // helps to know which square the player is on
   let squares = [];
+
+  // calculate start position of gamebox to make grid of 8 by 2
+  // later we change this to big-screen or adopt to full-screen on different devices
+  let gameBox = {
+    x:Math.floor(gameArea.width/100), //x=8
+    y:Math.floor(gameArea.height/100) //y=2
+  };
+
 }  
