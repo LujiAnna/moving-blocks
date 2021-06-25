@@ -3,12 +3,10 @@
 ## Learning objectives
 
 - Move DOM elements on the page
-- React to keypresses
+- React to key-presses to move through the grid and select
 - Collision detection
 
 ## The Mission
-
-Ready for a next level challenge?
 
 Have a square that you can move using the arrow keys.
 Have 4 other squares that move randomly around the screen.
@@ -29,5 +27,3 @@ Show the time since the start how long he survived.
 - Make a "god" square that makes the user immortal for the enemy squares.
 - Maybe over time spawn more enemy squares.
 - Go crazy
-
-##### Ps: If you sell this on the app store and become a millionaire the coach gets 10%. Deal?

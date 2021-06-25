@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Moving Blocks</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <!-- style -->
+    <!-- create 16 squares in game area grid -->
+    <style>
+    .gameArea {
+      width: 800px;
+      height:200px;
+    }
+    .score {
+      font-size: 3em;
+    }
+    .box{
+      /* <!-- moving box as main player object. --> */
+      /* <!-- give ability to move around. left/top will be dynamically set with js  --> */
+      position: absolute; 
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .square{
+      /* <!-- all squares --> */
+      position: relative;
+      border: 1px solid #ddd;
+      /* <!-- minus border on top/down, left/right --> */
+      width: 98px;
+      height: 98px;
+      /* <!-- make them stuck next to each other --> */
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 100px;
+      font-size: 24px;
+      color: #ddd;
+    }
+    .active{
+      /* <!-- for application to be added or removed on selected box  --> */
+      background-color: green;
+      color: white;
+
+    }
+  </style>
+  </head>
+  <body>
+    <main>
+      <div class="gameArea">
+
+      </div>
+    </main>
+    <!-- keep score -->
+    <aside >
+Score: <span class="score">0</span>
+    </aside>
+    
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
